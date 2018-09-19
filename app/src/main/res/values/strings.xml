@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Expensa</string>
+    <string name="display_onboarding_image">Display Image in Onboarding Screen</string>
+    <string name="sample_text">Sample</string>
+    <string name="title_activity_on_boarding">OnBoardingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="skip_button_text">Skip</string>
+    <string name="finish_intro_button_text">Finish</string>
+    <string name="add_description">sample_description</string>
 </resources>
