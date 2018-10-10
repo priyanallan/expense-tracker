@@ -42,7 +42,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
         val color1 = ContextCompat.getColor(this, R.color.blue_grey)
         val color2 = ContextCompat.getColor(this, R.color.red)
-        val color3 = ContextCompat.getColor(this, R.color.pink)
+        val color3 = ContextCompat.getColor(this, R.color.forestGreen)
 
         val colorList = arrayOf(color1, color2, color3)
 
@@ -65,7 +65,7 @@ class OnBoardingActivity : AppCompatActivity() {
             }
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                var colorUpdate: Int = evaluator.evaluate(positionOffset, colorList[position], colorList[if (position == 2) position else position + 1]) as Int
+                val colorUpdate: Int = evaluator.evaluate(positionOffset, colorList[position], colorList[if (position == 2) position else position + 1]) as Int
                 introViewPager.setBackgroundColor(colorUpdate)
             }
 
@@ -84,17 +84,23 @@ class OnBoardingActivity : AppCompatActivity() {
 
         })
 
-        skip_intro_button.setOnClickListener { finish() }
+        skip_intro_button.setOnClickListener {
+            //Write logic here to show a pop up with checkbox
+            setFirstTimeLaunchFlag()
+            finish() }
         next_intro_button.setOnClickListener {
             page += 1
             introViewPager.setCurrentItem(page, true)
         }
         finish_intro_button.setOnClickListener {
+            setFirstTimeLaunchFlag()
             finish()
-            SharedPref.getInstance(this).setIsFirstLaunchToFalse()
         }
     }
 
+    private fun setFirstTimeLaunchFlag(){
+        SharedPref.getInstance(this).setIsFirstLaunchToFalse()
+    }
     private fun updateIndicators(position : Int) {
      for (i: Int in 0..(indicators.size-1)){
         indicators[i].setBackgroundResource(if(i == position) R.drawable.indicator_selected else R.drawable.indicator_unselected)
@@ -154,16 +160,15 @@ class OnBoardingActivity : AppCompatActivity() {
      */
     class PlaceholderFragment : Fragment() {
 
-        val bgs = arrayOf(R.drawable.ic_baseline_money_24px, R.drawable.ic_baseline_money_24px, R.drawable.ic_baseline_money_24px)
+        private val bgs = arrayOf(R.drawable.ic_baseline_money_24px, R.drawable.ic_baseline_money_24px, R.drawable.ic_baseline_money_24px)
 
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                                   savedInstanceState: Bundle?): View? {
             val rootView = inflater.inflate(R.layout.fragment_on_boarding, container, false)
             rootView.section_label.text = getString(R.string.section_format, arguments?.getInt(ARG_SECTION_NUMBER))
 
-//            val imageSize = arguments?.getInt(ARG_SECTION_NUMBER) - 1
-//            val imageSize = 3
-//            intro_image.setBackgroundResource(bgs[imageSize-1])
+            val pageNumber = arguments?.getInt(ARG_SECTION_NUMBER)
+            if(pageNumber!=null) {rootView.intro_image.setBackgroundResource(bgs[pageNumber-1])}
             return rootView
         }
 

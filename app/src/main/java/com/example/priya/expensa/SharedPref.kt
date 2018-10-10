@@ -29,5 +29,4 @@ class SharedPref private constructor(){
     fun isFirstLaunch() : Boolean{
         return sharedPreferences!!.getBoolean(IS_FIRST_LAUNCH,true)
     }
-
 }

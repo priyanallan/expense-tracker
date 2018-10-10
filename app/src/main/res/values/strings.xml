@@ -8,4 +8,19 @@
     <string name="skip_button_text">Skip</string>
     <string name="finish_intro_button_text">Finish</string>
     <string name="add_description">sample_description</string>
+    <string name="registration_title">SignUp</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="title_activity_signup">SignUpActivity</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signUpButton">Register</string>
+    <string name="mobileNumber">Phone Number</string>
+    <string name="forgotPassword">Forgot Password?</string>
+    <string name="signIn">Already Registered. Click here to Sign In</string>
+    <string name="signUpImage">SignUp Image</string>
+    <string name="nextButton">Next Button</string>
+    <string name="thirdCarouselIndicator">Third Carousel Indicator</string>
+    <string name="secondCarouselIndicator">Second Carousel Indicator</string>
+    <string name="firstCarouselIndicator">First Carousel Indicator</string>
 </resources>

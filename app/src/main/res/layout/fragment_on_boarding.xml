@@ -36,13 +36,14 @@
         tools:text="@string/sample_text" />
 
     <TextView
+        android:id="@+id/section_text"
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:alpha="0.7"
         android:gravity="center"
-        android:text="@string/add_description"
+        tools:text="@string/add_description"
         android:textColor="@android:color/white" />
     </LinearLayout>
 

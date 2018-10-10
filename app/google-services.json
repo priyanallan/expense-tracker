@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "857196540404",
+    "firebase_url": "https://expensetracker-eacb7.firebaseio.com",
+    "project_id": "expensetracker-eacb7",
+    "storage_bucket": "expensetracker-eacb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857196540404:android:2b8467484b7d1a80",
+        "android_client_info": {
+          "package_name": "com.example.priya.expensa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857196540404-eulcdd0kbksorbkvkvucargllcm4ov2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMSfWKFlWM9vPLpkMqocf6OfLS6g2Wj-I"
+        },
+        {
+          "current_key": "AIzaSyBMSfWKFlWM9vPLpkMqocf6OfLS6g2Wj-I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

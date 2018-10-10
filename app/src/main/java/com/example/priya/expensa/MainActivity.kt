@@ -9,13 +9,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val isAppFirstLaunch = SharedPref.getInstance(this).isFirstLaunch()
-
         val onBoardingIntent = Intent(this, OnBoardingActivity::class.java)
+        val signUpIntent = Intent(this, SignUpActivity::class.java)
+
         if(isAppFirstLaunch){
             startActivity(onBoardingIntent)
+        } else {
+            startActivity(signUpIntent)
         }
-
     }
 }
